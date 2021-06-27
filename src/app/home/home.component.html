@@ -15,8 +15,23 @@
     </mat-menu>
   </mat-toolbar>
 </header>
-<app-profile></app-profile>
-<app-personal-info></app-personal-info>
-<app-socials></app-socials>
-<app-message-list></app-message-list>
-<app-feed-list></app-feed-list>
+
+<div class="container">
+  <div class=row>
+    <div class="col-4">
+      <app-profile></app-profile>
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-6">
+          <app-personal-info></app-personal-info>
+        </div>
+        <div class="col-6">
+          <app-socials></app-socials>
+        </div>
+      </div>
+      <app-message-list></app-message-list>
+      <app-feed-list></app-feed-list>
+    </div>
+  </div>
+</div>
