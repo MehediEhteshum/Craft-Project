@@ -1,0 +1,20 @@
+$img-dim: 15rem;
+
+#profile-img {
+  border-radius: 50%;
+  width: $img-dim;
+  height: $img-dim;
+}
+
+.favs-div {
+  width: 80%;
+  padding-top: 1rem;
+}
+
+.mat-icon {
+  transform: scale(2);
+}
+
+.favs-list {
+  font-size: small;
+}

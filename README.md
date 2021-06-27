@@ -1,2 +1,2 @@
 # Frontend Craft Project
-- Tools used: Typescript, AngularJS, Angular Material, CSS
+- Tools used: Typescript, AngularJS, Angular Material, SCSS, LESS, Bootstrap
