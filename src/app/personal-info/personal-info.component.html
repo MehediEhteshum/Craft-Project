@@ -5,7 +5,7 @@
       <button class="edit-btn" mat-icon-button *ngIf="!isEditMode" (click)="toggleEditMode()">
         <mat-icon svgIcon="edit"></mat-icon>
       </button>
-      <button class="edit-btn" mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
+      <button class="edit-btn" id="confirm-btn" mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
         <mat-icon svgIcon="save"></mat-icon>
       </button>
     </div>

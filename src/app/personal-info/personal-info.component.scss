@@ -4,6 +4,7 @@ mat-card {
   padding: 0;
   padding-bottom: 1rem;
   border-radius: $border-rad;
+  height: 100%;
 }
 
 mat-card-header {
@@ -34,4 +35,13 @@ mat-card-header {
   border-bottom: 1px solid grey;
   margin: auto;
   width: 90%;
+}
+
+#confirm-btn {
+  background-color: black;
+  transform: scale(0.75);
+}
+
+#confirm-btn mat-icon {
+  color: goldenrod;
 }

@@ -1,27 +1,33 @@
 <mat-card>
-  <mat-card-header>
-    <h3>Socials</h3>
-    <button mat-icon-button *ngIf="!isEditMode" (click)="toggleEditMode()">
-      <mat-icon svgIcon="edit"></mat-icon>
-    </button>
-    <button mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
-      <mat-icon svgIcon="save"></mat-icon>
-    </button>
+  <mat-card-header class="bg-color-goldenrod">
+    <div id="name-div" class="d-flex justify-content-between align-items-center">
+      <h5 id="name">Socials</h5>
+      <button class="edit-btn" mat-icon-button *ngIf="!isEditMode" (click)="toggleEditMode()">
+        <mat-icon svgIcon="edit"></mat-icon>
+      </button>
+      <button class="edit-btn" id="confirm-btn" mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
+        <mat-icon svgIcon="save"></mat-icon>
+      </button>
+    </div>
   </mat-card-header>
   <mat-card-content>
     <div *ngFor="let social of socials">
-      <div><mat-icon [svgIcon]="social.icon"></mat-icon></div>
-      <div *ngIf="isEditMode">
-        <mat-form-field>
-          <input matInput [(ngModel)]="social.url" />
-        </mat-form-field>
-      </div>
-      <div *ngIf="!isEditMode">
+      <div class="row m-1 my-3">
+        <div class="col-2 d-flex align-items-center">
+          <mat-icon [svgIcon]="social.icon"></mat-icon>
+        </div>
+        <div class="col-10" *ngIf="isEditMode">
+          <mat-form-field>
+            <input matInput [(ngModel)]="social.url" />
+          </mat-form-field>
+        </div>
+        <div class="col-10" *ngIf="!isEditMode">
           {{social.url}}
+        </div>
       </div>
     </div>
     <div *ngIf="isEditMode">
-      <button mat-icon-button (click)="onAddRecord()">
+      <button id="add-btn" mat-icon-button (click)="onAddRecord()">
         <mat-icon svgIcon="add"></mat-icon>
       </button>
     </div>
