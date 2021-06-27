@@ -1,86 +1,95 @@
 <mat-card>
-  <mat-card-header>
-    <h3>Ellie Jordan</h3>
-    <button mat-icon-button *ngIf="!isEditMode" (click)="toggleEditMode()">
-      <mat-icon svgIcon="edit"></mat-icon>
-    </button>
-    <button mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
-      <mat-icon svgIcon="save"></mat-icon>
-    </button>
+  <mat-card-header class="bg-color-goldenrod">
+    <div id="name-div" class="d-flex justify-content-between align-items-center">
+      <h5 id="name">Ellie Jordan</h5>
+      <button class="edit-btn" mat-icon-button *ngIf="!isEditMode" (click)="toggleEditMode()">
+        <mat-icon svgIcon="edit"></mat-icon>
+      </button>
+      <button class="edit-btn" mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
+        <mat-icon svgIcon="save"></mat-icon>
+      </button>
+    </div>
   </mat-card-header>
   <mat-card-content>
     <div>
       <div *ngFor="let email of details.emails">
-        <div>
-          <mat-icon [svgIcon]="email.icon"></mat-icon>
-        </div>
-        <div *ngIf="isEditMode">
-          <mat-form-field>
-            <input matInput [(ngModel)]="email.name" />
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput [(ngModel)]="email.detail" />
-          </mat-form-field>
-        </div>
-        <div *ngIf="!isEditMode">
-          <div *ngIf="email.name">
-            {{ email.name }}
+        <div class="row m-1">
+          <div class="col-2 d-flex align-items-center">
+            <mat-icon [svgIcon]=" email.icon">
+            </mat-icon>
           </div>
-          <div>
-            {{ email.detail }}
+          <div class="col-10" *ngIf="isEditMode">
+            <mat-form-field>
+              <input matInput [(ngModel)]="email.name" />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput [(ngModel)]="email.detail" />
+            </mat-form-field>
+          </div>
+          <div class="col-10" *ngIf="!isEditMode">
+            <div *ngIf="email.name">
+              {{ email.name }}
+            </div>
+            <div>
+              {{ email.detail }}
+            </div>
           </div>
         </div>
       </div>
-      <mat-divider></mat-divider>
+      <div class="border-div"></div>
       <div *ngFor="let phone of details.phones">
-        <div>
-          <mat-icon [svgIcon]="phone.icon"></mat-icon>
-        </div>
-        <div *ngIf="isEditMode">
-          <mat-form-field>
-            <input matInput [(ngModel)]="phone.name" />
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput [(ngModel)]="phone.detail" />
-          </mat-form-field>
-        </div>
-        <div *ngIf="!isEditMode">
-          <div *ngIf="phone.name">
-            {{ phone.name }}
+        <div class="row m-1">
+          <div class="col-2 d-flex align-items-center">
+            <mat-icon [svgIcon]="phone.icon"></mat-icon>
           </div>
-          <div>
-            {{ phone.detail }}
+          <div class="col-10" *ngIf="isEditMode">
+            <mat-form-field>
+              <input matInput [(ngModel)]="phone.name" />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput [(ngModel)]="phone.detail" />
+            </mat-form-field>
+          </div>
+          <div class="col-10" *ngIf="!isEditMode">
+            <div *ngIf="phone.name">
+              {{ phone.name }}
+            </div>
+            <div>
+              {{ phone.detail }}
+            </div>
           </div>
         </div>
       </div>
-      <mat-divider></mat-divider>
+      <div class="border-div"></div>
       <div *ngFor="let address of details.addresses">
-        <div>
-          <mat-icon [svgIcon]="address.icon"></mat-icon>
-        </div>
-        <div *ngIf="isEditMode">
-          <mat-form-field>
-            <input matInput [(ngModel)]="address.name" />
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput [(ngModel)]="address.detail" />
-          </mat-form-field>
-        </div>
-        <div *ngIf="!isEditMode">
-          <div *ngIf="address.name">
-            {{ address.name }}
+        <div class="row m-1">
+          <div class="col-2 d-flex align-items-center">
+            <mat-icon [svgIcon]="address.icon"></mat-icon>
           </div>
-          <div>
-            {{ address.detail }}
+          <div class="col-10" *ngIf="isEditMode">
+            <mat-form-field>
+              <input matInput [(ngModel)]="address.name" />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput [(ngModel)]="address.detail" />
+            </mat-form-field>
+          </div>
+          <div class="col-10" *ngIf="!isEditMode">
+            <div *ngIf="address.name">
+              {{ address.name }}
+            </div>
+            <div>
+              {{ address.detail }}
+            </div>
           </div>
         </div>
       </div>
-      <mat-divider></mat-divider>
-      <div>
-        <div>
+      <div class="border-div"></div>
+      <div class="row m-1">
+        <div class="col-2 d-flex align-items-center">
           <mat-icon [svgIcon]="details.birthday.icon"></mat-icon>
         </div>
-        <div *ngIf="isEditMode">
+        <div class="col-10" *ngIf="isEditMode">
           <mat-form-field>
             <input matInput [(ngModel)]="details.birthday.name" />
           </mat-form-field>
@@ -88,7 +97,7 @@
             <input matInput [(ngModel)]="details.birthday.detail" />
           </mat-form-field>
         </div>
-        <div *ngIf="!isEditMode">
+        <div class="col-10" *ngIf="!isEditMode">
           <div *ngIf="details.birthday.name">
             {{ details.birthday.name }}
           </div>

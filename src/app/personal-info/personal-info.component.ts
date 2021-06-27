@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-personal-info',
   templateUrl: './personal-info.component.html',
-  styleUrls: ['./personal-info.component.less'],
+  styleUrls: ['./personal-info.component.scss'],
 })
 export class PersonalInfoComponent implements OnInit {
   details: PersonalDetails = {
@@ -43,9 +43,9 @@ export class PersonalInfoComponent implements OnInit {
 
   isEditMode: boolean = false;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   toggleEditMode(): void {
     this.isEditMode = !this.isEditMode;

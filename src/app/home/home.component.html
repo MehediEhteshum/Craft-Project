@@ -1,10 +1,10 @@
 <header>
   <mat-toolbar class="bg-color-goldenrod">
     <h1>IN TOUCH</h1>
-    <button mat-mini-fab class="x" [matMenuTriggerFor]="menu">
+    <button mat-mini-fab [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu class="y" #menu="matMenu">
+    <mat-menu #menu="matMenu">
       <button mat-menu-item>My Profile</button>
       <div class="border-div"></div>
       <button mat-menu-item>Setting</button>

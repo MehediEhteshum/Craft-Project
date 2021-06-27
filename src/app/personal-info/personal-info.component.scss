@@ -1,0 +1,37 @@
+$border-rad: 1rem;
+
+mat-card {
+  padding: 0;
+  padding-bottom: 1rem;
+  border-radius: $border-rad;
+}
+
+mat-card-header {
+  border-radius: $border-rad $border-rad 0rem 0rem;
+}
+
+#name-div {
+  width: 100%;
+}
+
+#name {
+  margin: 0;
+  color: black;
+  font-weight: bold;
+}
+
+.edit-btn {
+  margin-right: 1rem;
+}
+
+.edit-btn mat-icon {
+  transform: scale(0.75);
+  color: black;
+  padding: 0;
+}
+
+.border-div {
+  border-bottom: 1px solid grey;
+  margin: auto;
+  width: 90%;
+}
