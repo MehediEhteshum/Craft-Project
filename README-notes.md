@@ -13,3 +13,4 @@
 - Bootstrap used after trying "material grid list" and "flexible layout". These will take some more time to understand as I have never used them before.
 - Personal info and Socials components: edit mode items' gap adjustment skipped, edit mode & not edit mode card height adjustment skipped.
 - Messages component: 'plus' button functionality skipped.
+- Couldn't find the background image, so skipped.
