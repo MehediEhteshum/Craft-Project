@@ -2,10 +2,10 @@
   <mat-card-header class="bg-color-goldenrod">
     <div id="name-div" class="d-flex justify-content-between align-items-center">
       <h5 id="name">Ellie Jordan</h5>
-      <button class="edit-btn" mat-icon-button *ngIf="!isEditMode" (click)="toggleEditMode()">
+      <button class="card-btn" mat-icon-button *ngIf="!isEditMode" (click)="toggleEditMode()">
         <mat-icon svgIcon="edit"></mat-icon>
       </button>
-      <button class="edit-btn" id="confirm-btn" mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
+      <button class="card-btn" id="confirm-btn" mat-icon-button *ngIf="isEditMode" (click)="toggleEditMode()">
         <mat-icon svgIcon="save"></mat-icon>
       </button>
     </div>

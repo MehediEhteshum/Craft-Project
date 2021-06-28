@@ -1,15 +1,18 @@
-<div>
-  <div>
-    <div *ngIf="message.icons[0]">
-      <img [src]="message.icons[0]" />
+<div class="row m-1">
+  <div class="imgs-div col-2 d-flex justify-content-between align-items-center">
+    <div id="img-div-1" *ngIf="message.icons[0]">
+      <img class="msg-img" [src]="message.icons[0]" />
     </div>
-    <div *ngIf="message.icons[1]">
-      <img [src]="message.icons[1]" />
+    <div id="img-div-2" *ngIf="message.icons[1]">
+      <img class="msg-img" [src]="message.icons[1]" />
     </div>
-    <div *ngIf="message.icons.length > 2">
-      <div>+{{message.icons.length - 2}}</div>
+    <div id="msg-count-div" *ngIf="message.icons.length > 2">
+      <div><span>+{{message.icons.length - 2}}</span></div>
     </div>
   </div>
-  <div>{{ message.time }}</div>
-  <div>{{ message.message }}</div>
+  <div class="col-10">
+    <div><i>{{ message.time }}</i></div>
+    <div>{{ message.message }}</div>
+  </div>
 </div>
+<div class="border-div"></div>

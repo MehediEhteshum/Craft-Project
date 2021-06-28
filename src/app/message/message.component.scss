@@ -1,0 +1,43 @@
+$msg-img-dim: 3.5rem;
+
+.msg-img {
+  border-radius: 50%;
+  width: $msg-img-dim;
+  height: $msg-img-dim;
+}
+
+.imgs-div {
+  display: inline-block;
+}
+
+#img-div-2 {
+  position: relative;
+  left: -($msg-img-dim - 1rem);
+}
+
+#msg-count-div {
+  position: relative;
+  left: -2 * ($msg-img-dim - 1rem);
+}
+
+#msg-count-div div {
+  background-color: goldenrod;
+  border-radius: 50%;
+  width: $msg-img-dim;
+  height: $msg-img-dim;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  display: table;
+}
+
+#msg-count-div div span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.border-div {
+  border-bottom: 1px solid grey;
+  margin: auto;
+  width: 95%;
+}
