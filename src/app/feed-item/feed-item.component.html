@@ -1,17 +1,21 @@
-<div>
-  <div>
+<div class="row m-1">
+  <div class="col-1 d-flex justify-content-between align-items-center">
     <mat-icon [svgIcon]="feedItem.icon"></mat-icon>
   </div>
-  <div>
-      <div>{{feedItem.time}}</div>
-      <div *ngIf="feedItem.imagePath">
-          <img [src]="feedItem.imagePath"/>
+  <div class="col-11">
+    <div><i>{{feedItem.time}}</i></div>
+    <div class="row d-flex justify-content-start">
+      <div class="col-2" *ngIf="feedItem.imagePath">
+        <img id="feed-img" [src]="feedItem.imagePath" />
       </div>
-      <div>
+      <div class="col-10">
+        <div>
           {{feedItem.message}}
-      </div>
-      <div *ngIf="feedItem.subtext">
+        </div>
+        <div *ngIf="feedItem.subtext">
           {{feedItem.subtext}}
+        </div>
       </div>
+    </div>
   </div>
 </div>

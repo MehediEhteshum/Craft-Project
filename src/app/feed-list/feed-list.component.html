@@ -1,11 +1,13 @@
 <mat-card>
-    <mat-card-header>
-        <h3>Feed</h3>
+    <mat-card-header class="bg-color-goldenrod">
+        <div id="name-div" class="d-flex align-items-center m-2">
+            <h5 id="name">Feed</h5>
+        </div>
     </mat-card-header>
     <mat-card-content>
         <div *ngFor="let feedItem of feed">
             <app-feed-item [feedItem]="feedItem"></app-feed-item>
-            <mat-divider></mat-divider>
+            <div class="border-div"></div>
         </div>
     </mat-card-content>
 </mat-card>
